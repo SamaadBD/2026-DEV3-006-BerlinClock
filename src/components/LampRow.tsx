@@ -1,5 +1,5 @@
 import type { LampColor } from '../domain/types.ts';
-import { Lamp, type LampPosition, type LampVariant } from './Lamp';
+import { Lamp, type LampPosition, type LampVariant } from './Lamp.tsx';
 
 interface LampRowProps {
   lamps: LampColor[];

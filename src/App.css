@@ -59,3 +59,11 @@ header {
 .lamp--o {
   background: #fff;
 }
+
+.digital-time {
+  margin: 20px 0 0;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 80px;
+  letter-spacing: 5px;
+  color: #1a1a1a;
+}

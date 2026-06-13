@@ -18,7 +18,7 @@ interface LampProps {
 export function Lamp({ color, variant, position }: LampProps) {
   return (
     <span
-      className={`lamp lamp--${LAMP_COLOR_CLASS[color]} lamp-${variant} lamp--${position}`}
+      className={`lamp lamp--${LAMP_COLOR_CLASS[color]} lamp--${variant} lamp--${position}`}
       aria-hidden='true'
     />
   );
