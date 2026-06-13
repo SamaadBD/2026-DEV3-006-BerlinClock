@@ -1,0 +1,69 @@
+.app {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.berlin-clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.lamp-row {
+  display: flex;
+  gap: 6px;
+}
+
+.lamp {
+  display: block;
+  border: 2px solid #3d4852;
+  background: #fff;
+}
+
+.lamp--wide {
+  width: 68px;
+  height: 42px;
+}
+.lamp--narrow {
+  width: 22px;
+  height: 42px;
+}
+.lamp--seconds {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+}
+
+.lamp--first {
+  border-top-left-radius: 999px;
+  border-bottom-left-radius: 999px;
+}
+.lamp--last {
+  border-top-right-radius: 999px;
+  border-bottom-right-radius: 999px;
+}
+
+.lamp--y {
+  background: #f7e017;
+}
+.lamp--r {
+  background: #e5261f;
+}
+.lamp--o {
+  background: #fff;
+}
+
+.digital-time {
+  margin: 20px 0 0;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 80px;
+  letter-spacing: 5px;
+  color: #1a1a1a;
+}
