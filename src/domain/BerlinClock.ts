@@ -1,5 +1,5 @@
-import { buildFiveMinuteRow, buildLampRow, lampRowToString } from './LampRow'
-import { LAMP_COUNTS, type BerlinClockState, type Time } from './types'
+import { buildFiveMinuteRow, buildLampRow, lampRowToString } from './LampRow.ts'
+import { LAMP_COUNTS, type BerlinClockState, type Time } from './types.ts'
 
 function normalizeHours(hours: number): number {
   return hours === 24 ? 0 : hours

@@ -1,4 +1,4 @@
-import { LAMP_COUNTS, type LampColor, type LitLampColor } from './types'
+import { LAMP_COUNTS, type LampColor, type LitLampColor } from './types.ts'
 
 export function buildLampRow(
   litCount: number,

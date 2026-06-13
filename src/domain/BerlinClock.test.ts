@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { toBerlinClockState, toBerlinClockString } from './BerlinClock'
-import { parseTime } from './Time'
+import { toBerlinClockState, toBerlinClockString } from './BerlinClock.ts'
+import { parseTime } from './Time.ts'
 
 describe('BerlinClock', () => {
   it('returns all lamps off at midnight except seconds on even second', () => {

@@ -1,4 +1,4 @@
-import type { Time } from './types'
+import type { Time } from './types.ts'
 
 const TIME_PATTERN = /^(\d{2}):(\d{2}):(\d{2})$/
 
