@@ -1,20 +1,24 @@
-import { buildFiveMinuteRow, buildLampRow, lampRowToString } from './LampRow.ts'
-import { LAMP_COUNTS, type BerlinClockState, type Time } from './types.ts'
+import {
+  buildFiveMinuteRow,
+  buildLampRow,
+  lampRowToString,
+} from './LampRow.ts';
+import { LAMP_COUNTS, type BerlinClockState, type Time } from './types.ts';
 
 function normalizeHours(hours: number): number {
-  return hours === 24 ? 0 : hours
+  return hours === 24 ? 0 : hours;
 }
 
 function secondsLamp(seconds: number): BerlinClockState['seconds'] {
-  return seconds % 2 === 0 ? 'Y' : 'O'
+  return seconds % 2 === 0 ? 'Y' : 'O';
 }
 
 export function toBerlinClockState(time: Time): BerlinClockState {
-  const hours = normalizeHours(time.hours)
-  const fiveHourLamps = Math.floor(hours / 5)
-  const oneHourLamps = hours % 5
-  const fiveMinuteLamps = Math.floor(time.minutes / 5)
-  const oneMinuteLamps = time.minutes % 5
+  const hours = normalizeHours(time.hours);
+  const fiveHourLamps = Math.floor(hours / 5);
+  const oneHourLamps = hours % 5;
+  const fiveMinuteLamps = Math.floor(time.minutes / 5);
+  const oneMinuteLamps = time.minutes % 5;
 
   return {
     seconds: secondsLamp(time.seconds),
@@ -22,11 +26,11 @@ export function toBerlinClockState(time: Time): BerlinClockState {
     oneHours: buildLampRow(oneHourLamps, LAMP_COUNTS.oneHours, 'R'),
     fiveMinutes: buildFiveMinuteRow(fiveMinuteLamps),
     oneMinutes: buildLampRow(oneMinuteLamps, LAMP_COUNTS.oneMinutes, 'Y'),
-  }
+  };
 }
 
 export function toBerlinClockString(time: Time): string {
-  const state = toBerlinClockState(time)
+  const state = toBerlinClockState(time);
 
   return [
     state.seconds,
@@ -34,5 +38,5 @@ export function toBerlinClockString(time: Time): string {
     lampRowToString(state.oneHours),
     lampRowToString(state.fiveMinutes),
     lampRowToString(state.oneMinutes),
-  ].join(' ')
+  ].join(' ');
 }
